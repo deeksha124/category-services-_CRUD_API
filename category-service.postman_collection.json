@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "68b4f4f8-0513-489d-9a26-66d5def77a7a",
+		"name": "category-service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30459004",
+		"_collection_link": "https://bold-space-803903.postman.co/workspace/New-Team-Workspace~ef3373b0-23f7-4481-9091-c7c794c53dc0/collection/30459004-68b4f4f8-0513-489d-9a26-66d5def77a7a?action=share&source=collection_link&creator=30459004"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\" : \"admin@codesfortomorrow.com\",\n    \"password\" : \"Admin123!@#\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add_category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE2Mzc3MjQzLCJleHAiOjE3MTY0NjM2NDN9.JNaw9sPQkuUmwVPtNCVWBIo7oUWlLIjAtsYsEmLagNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_name\"  : \"fronted2\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/category",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"category"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getcategories",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE2Mzc3MjQzLCJleHAiOjE3MTY0NjM2NDN9.JNaw9sPQkuUmwVPtNCVWBIo7oUWlLIjAtsYsEmLagNg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/categories",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"categories"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update_category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE2MzgwNDM0LCJleHAiOjE3MTY0NjY4MzR9.mXo_cmppi911_cWAUGzopT90wNWCAXLmZdWOiZCd6ZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"category_name\" : \"fronted4\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/category/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"category",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE2MzgwNDM0LCJleHAiOjE3MTY0NjY4MzR9.mXo_cmppi911_cWAUGzopT90wNWCAXLmZdWOiZCd6ZU",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/category/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"category",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_serviceCategoryI",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE2MzgxMzQ1LCJleHAiOjE3MTY0Njc3NDV9.YUthzc7LU3Ip3TDRBsfrYJXdVWTSsmqoOv6NaWt0zKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service_name\" : \"software\",\n    \"type\" :  \"Hourly\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/category/1/service",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"category",
+						"1",
+						"service"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " get_CategoryServices",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE2MzgxMzQ1LCJleHAiOjE3MTY0Njc3NDV9.YUthzc7LU3Ip3TDRBsfrYJXdVWTSsmqoOv6NaWt0zKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:5000/category/1/services",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"category",
+						"1",
+						"services"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update_category_services",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE2MzgxMzQ1LCJleHAiOjE3MTY0Njc3NDV9.YUthzc7LU3Ip3TDRBsfrYJXdVWTSsmqoOv6NaWt0zKg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"service_name\" : \"hardware\",\n    \"type\" :  \"Weekly\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/category/1/service/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"category",
+						"1",
+						"service",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
